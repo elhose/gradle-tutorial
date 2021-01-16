@@ -6,3 +6,7 @@ import java.awt.Taskbar
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/6.8/samples
  */
+
+task firstTask {
+    println 'Gradle Rocks!'
+}
