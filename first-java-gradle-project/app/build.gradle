@@ -13,11 +13,14 @@ plugins {
 
 project.description = "First Java project"
 project.version = 1.0
+project.ext.myCustomProperty = "Custom prop"
 
 repositories {
     println project.name
     println project.description
     println project.version
+    println project.myCustomProperty
+    println project.property("myCustomProperty")
 
     // Use JCenter for resolving dependencies.
     jcenter()
