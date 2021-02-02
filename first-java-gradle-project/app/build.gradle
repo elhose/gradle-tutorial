@@ -11,7 +11,14 @@ plugins {
     id 'application'
 }
 
+project.description = "First Java project"
+project.version = 1.0
+
 repositories {
+    println project.name
+    println project.description
+    println project.version
+
     // Use JCenter for resolving dependencies.
     jcenter()
 
