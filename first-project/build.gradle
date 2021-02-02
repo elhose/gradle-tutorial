@@ -18,4 +18,28 @@ task firstTask {
         println 'Second method during Execution phase'
     }
 }
+
+task deployToStage {
+    doLast {
+        println 'Correctly deployed to Stage!'
+    }
+}
+
+task deployToProd {
+    doLast {
+        println 'Correctly deployed to Prod!'
+    }
+}
+
+task cleanUp {
+    doLast {
+        println 'Cleaning all files!'
+    }
+}
+
+deployToProd.dependsOn deployToStage
+deployToProd.finalizedBy cleanUp
+
+defaultTasks = ["deployToStage"] // instead of calling gradle deployToStage, this task is being executed now upon gradle command
+
 println 'Finish'
